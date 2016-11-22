@@ -1,0 +1,14 @@
+Framework PHP EasyFrame
+PHP 7 / HTML5 / CSS3 / Bootstrap 4 Alpha
+
+Développer by créa-troyes.fr  /  @crea_troyes
+
+Documentation : http://easyframe.crea-troyes.fr
+
+
+Historique :
+V1.02 : Mise à jour du menu collapse
+v1.01 : Validation W3C des formulaires générés
+        Création du Model menu.php
+        Test de l'existence de la Vue par le Controleur
+        Lien actif du menu
