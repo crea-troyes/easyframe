@@ -4,7 +4,7 @@ function show_menu($menuHeader, $headHTML, $pageSecure) {
     
     $menu_color = ( empty($menuHeader["info"]["color"]) ? "navbar-light bg-faded" : $menuHeader["info"]["color"]);
 
-    echo '<nav class="navbar '.$menuHeader["info"]["placement"].' '.$menu_color.' '.$menuHeader["info"]["class"].'">
+    echo '<nav class="navbar navbar-expand-lg '.$menuHeader["info"]["placement"].' '.$menu_color.' '.$menuHeader["info"]["class"].'">
             <a class="navbar-brand" href="'.$headHTML["adresse_site"].'">';
 
             if(!empty($headHTML["logo"])) {echo '<img src="img/'.$headHTML["logo"].'" width="30" height="30" class="d-inline-block align-top right5" alt="'.$headHTML["titre"].'">'; }

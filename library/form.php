@@ -106,7 +106,7 @@ function formulaire($arrayForm, $pageSecure) {
                         break;
 
                     case "radio":
-                        echo '<fieldset class="form-group row '.$champ[$key_champ]["class"].'"><legend class="col-form-legend col-sm-2">'.$champ[$key_champ]["label"].' '.$asterisque.'</legend><div class="col-sm-10">';
+                        echo '<div class="form-group row '.$champ[$key_champ]["class"].'"><legend class="col-form-legend col-sm-2">'.$champ[$key_champ]["label"].' '.$asterisque.'</legend><div class="col-sm-10">';
                         $name_radio = $champ[$key_champ]["name"];
                         $checked_radio = ( !empty($valeur) ? $valeur : $champ[$key_champ]["checked"]);
                         foreach($arrayForm[$key][$key_champ]["input"] as $champ_radio) {
@@ -116,7 +116,7 @@ function formulaire($arrayForm, $pageSecure) {
                             <input class="form-check-input" type="radio" name="'.$name_radio.'" id="radio'.$i_radio.'" value="'.$key_radio.'" '.$check_this.'> '.$champ_radio.'</label></div>';
                             $i_radio = $i_radio + 1;
                         }
-                        echo $help_champ.'</div></fieldset>';
+                        echo $help_champ.'</div></div>';
                         break;
                         
                     case "textarea":
