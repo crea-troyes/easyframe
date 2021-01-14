@@ -12,9 +12,9 @@ Tout est automatiquement géré par EasyFrame.
 
 Il ne vous reste plus qu'à vous occuper du contenu de chacune des pages que vous allez créer et ranger dans le dossier layout/.
 
-### CSS / Bootsrap 4
+### CSS / Bootsrap 5
 
-Mise en page CSS prête à l'emploi avec Bootstrap 4 ou selectionner vos propres feuilles de style CSS.
+Mise en page CSS prête à l'emploi avec Bootstrap 5 ou selectionner vos propres feuilles de style CSS.
 
 ### Gestion formulaire
 
