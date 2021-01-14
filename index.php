@@ -2,13 +2,13 @@
 
 /***********************************************************************
 
-Version 1.03 
+Version 1.10 
 Start : 02.11.16
-Last : 27.20.20
+Last : 14.01.21
 
 PHP 7 / HTML5 / CSS3
 
-Bootstrap 4.5 
+Bootstrap 5 
 
 Développer by créa-troyes.fr  /  @crea_troyes
 

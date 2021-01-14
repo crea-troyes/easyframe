@@ -1,5 +1,5 @@
 Framework PHP EasyFrame
-PHP 7 / HTML5 / CSS3 / Bootstrap 4.5
+PHP 7 / HTML5 / CSS3 / Bootstrap 5
 
 Développer by créa-troyes.fr  /  @crea_troyes
 
@@ -7,6 +7,7 @@ Documentation : http://easyframe.crea-troyes.fr
 
 
 Historique :
+v1.10 : Mise à jour Boostrap 5.0.1
 v1.03 : Mise à jour Bootstrap 4.5
 v1.02 : Mise à jour du menu collapse
 v1.01 : Validation W3C des formulaires générés
