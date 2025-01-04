@@ -12,3 +12,6 @@ v1.01 : Validation W3C des formulaires générés
         Création du Model menu.php
         Test de l'existence de la Vue par le Controleur
         Lien actif du menu
+V2.00 : Compatibilité PHP 8.2.20
+        Sécurisation des headers
+        Optimisatin pour Page Speed Insights
