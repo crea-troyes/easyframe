@@ -1,6 +1,11 @@
 # easyframe
 Lightweight Framework PHP for small project
 
+Version 2.00 - 02.01.2025
+- Compatible PHP 8.2.20
+- Sécurisation des Headers
+- Optimiser pour page Speed insights
+
 EasyFrame a été conçu pour développer rapidement un site web de quelques pages nécessitant un outil ni trop lourd, ni trop compliqué. Ce framework vous fera gagner du temps dans la création des pages afin de vous concentrer sur leur contenu tout en ayant un maximum de liberté.
 
 Restez libre de créer ce que vous souhaitez.
