@@ -28,7 +28,9 @@ switch($pageSecure) {
         $id_form_send = "formContact";
         // Traitement du formulaire. Pour un traitement par mail, indiquer l'adresse mail du destinataire
         $traitement = "creatroyes@gmail.com";
-        traitement_formulaire(htmlspecialchars($_POST['send']), $id_form_send, $traitement);
+        if(isset($_POST['send'])) {
+            traitement_formulaire(htmlspecialchars($_POST['send']), $id_form_send, $traitement);
+        }
         require_once('library/form.php');
         break;
         

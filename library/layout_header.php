@@ -18,6 +18,14 @@ function show_header($headHTML, $controleur, $pageSecure) {
     echo '<link rel="shortcut icon" type="image/x-icon" href="img/'.$headHTML["favicon"].'" />';
     echo '<link rel="icon" type="image/vnd.microsoft.icon" href="img/'.$headHTML["favicon"].'">';
     
+    // Détermine la balise canonical
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $domain = $_SERVER['HTTP_HOST'];
+    $path = $_SERVER['REQUEST_URI'];
+    $canonicalUrl = $protocol . $domain . $path;
+    echo '<link rel="canonical" href="' . htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8') . '">';
+
+    
     echo '<script>function loadCSS(a,d,f,g){var b=window.document.createElement("link");var c=d||window.document.getElementsByTagName("script")[0];var e=window.document.styleSheets;b.rel="stylesheet";b.href=a;b.media="only x";if(g){b.onload=g}c.parentNode.insertBefore(b,c);b.onloadcssdefined=function(h){var k;for(var j=0;j<e.length;j++){if(e[j].href&&e[j].href.indexOf(a)>-1){k=true}}if(k){h()}else{setTimeout(function(){b.onloadcssdefined(h)})}};b.onloadcssdefined(function(){b.media=f||"all"});return b};</script>';
     
     // CSS

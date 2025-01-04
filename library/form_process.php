@@ -2,9 +2,9 @@
 
 function traitement_formulaire($id_form, $id_form_send, $traitement) {
 
-    $valeur_form;
+    $valeur_form = "";
     $error_form = 0;
-    $message_error_form;
+    $message_error_form = "";
     
     $id_form = ( empty($id_form) ? "" : htmlspecialchars($id_form));
     if(trim($id_form) != "" AND $id_form == $id_form_send) {
@@ -33,8 +33,16 @@ function traitement_formulaire($id_form, $id_form_send, $traitement) {
                     
             }
             
-            $valeur_form .= ( empty($valeur_form) ? $champ_secure.'::'.$valeur_secure : '//'.$champ_secure.'::'.$valeur_secure );
-            
+            // Vérifiez que toutes les variables sont des chaînes
+            $champ_secure = is_array($champ_secure) ? implode(', ', $champ_secure) : $champ_secure;
+            $valeur_secure = is_array($valeur_secure) ? implode(', ', $valeur_secure) : $valeur_secure;
+            $valeur_form = is_array($valeur_form) ? implode(', ', $valeur_form) : $valeur_form;
+
+            // Concaténation
+            $valeur_form .= ( $valeur_form == "" 
+                ? $champ_secure . '::' . $valeur_secure 
+                : '//' . $champ_secure . '::' . $valeur_secure );
+
             // Vérification des champs
             switch(substr($array_champ_verif[1] ,0, 2)) {
                     
@@ -123,6 +131,7 @@ function traitement_formulaire($id_form, $id_form_send, $traitement) {
             foreach($array_champ as $array_valeur_mail) {
                 $mail_formulaire .= '<li>';
                 $valeur_mail = explode(":", $array_valeur_mail);
+                $champ_form_checkbox = (isset($champ_form_checkbox) ? $champ_form_checkbox : "");
                 foreach($valeur_mail as $champ_mail) {
                     if($champ_mail == $valeur_mail[0]) {
                         $valeur_form_mail = $valeur_mail[2];

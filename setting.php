@@ -69,18 +69,18 @@ $menuHeader = array(
     // LIEN déroulant du menu
     'Menu déroulant' => array(
         // Premier sous-menu
-        'exemple 1' => 'exemple1.html',
+        'Page exemple' => 'exemple.html',
         // Deuxième sous-menu ...
-        'exemple 2' => 'exemple2.html',
+        'exemple 2#' => 'exemple2.html',
         // Troisième sous-menu ...
-        'exemple 3' => 'exemple3.html'
+        'exemple 3#' => 'exemple3.html'
     ),
     
     // LIEN déroulant du menu
     'Menu déroulant 2' => array(
-        'exemple 4' => 'exemple4.html',
-        'exemple 5' => 'exemple5.html',
-        'exemple 6' => 'exemple6.html'
+        'exemple 4#' => 'exemple4.html',
+        'exemple 5#' => 'exemple5.html',
+        'exemple 6#' => 'exemple6.html'
     ),
     
     // LIEN simple du menu

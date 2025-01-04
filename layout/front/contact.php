@@ -73,7 +73,7 @@
                     'name' => 'date',
                     'verif' => '',
                     'help' => '',
-                    'value' => '2016-12-25',
+                    'value' => '2000-12-25',
                     'label' => 'Anniversaire',
                     'class' => ''
                 ) 

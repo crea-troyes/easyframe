@@ -1,5 +1,5 @@
 Framework PHP EasyFrame
-PHP 7 / HTML5 / CSS3 / Bootstrap 5
+PHP 8 / HTML5 / CSS3 / Bootstrap 5
 
 Développer by créa-troyes.fr  /  @crea_troyes
 
@@ -14,3 +14,7 @@ v1.01 : Validation W3C des formulaires générés
         Création du Model menu.php
         Test de l'existence de la Vue par le Controleur
         Lien actif du menu
+v2.00 : Compatibilité MySQL 8 et PHP 8
+        Optimisation Page Speed Insights
+        Sécurisation des headers
+        MAJ Fichier htAccess

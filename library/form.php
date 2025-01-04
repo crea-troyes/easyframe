@@ -5,6 +5,8 @@ function formulaire($arrayForm, $pageSecure) {
     $arrayInfo = $arrayForm["info"];
     $id_form = ( !empty($arrayInfo["id"]) ? $arrayInfo["id"] : "");
     
+    $_POST['validation_form'] = (isset($_POST['validation_form']) ? $_POST['validation_form'] : "");
+    
     if($_POST['validation_form'] == $id_form AND $_POST['error_form'] == 0) {
         $confirmation_formulaire = ( !empty($arrayInfo['confirmation']) ? $arrayInfo['confirmation'] : "<h4>Formulaire envoyé !</h4>");
         echo '<div class="alert alert-info top50" role="alert">'.$confirmation_formulaire.'</div>';
@@ -33,6 +35,13 @@ function formulaire($arrayForm, $pageSecure) {
                 $key_champ = key($champ);
                 
                 $verif_champ = ( !empty($champ[$key_champ]["verif"]) ? $champ[$key_champ]["verif"] : "no");
+                
+                if(empty($array_champ) || !isset($array_champ)) {
+                    $array_champ = "";
+                }
+                
+                $champ[$key_champ]["name"] = (isset($champ[$key_champ]["name"]) ? $champ[$key_champ]["name"] : "");
+                
                 $array_champ .= ( !empty($array_champ) ? "-".$key_champ.':'.$verif_champ.':'.$champ[$key_champ]["name"] : $key_champ.':'.$verif_champ.':'.$champ[$key_champ]["name"]);
                 
                 $required= "";
@@ -54,10 +63,14 @@ function formulaire($arrayForm, $pageSecure) {
                     
                 } 
                 else {
-                    $valeur = $champ[$key_champ]["value"];
+                    
+                    $valeur = (isset($champ[$key_champ]["value"]) ? $champ[$key_champ]["value"] : "");
+                
                 }
                 
                 $class_error_form = "";$msg_error_form = "";
+                
+                $array_message_error_form = (isset($array_message_error_form) ? $array_message_error_form : []);
                 
                 foreach($array_message_error_form as $message_error_recup) {
                     $array_message_error_recup = explode(":", $message_error_recup);
@@ -103,7 +116,13 @@ function formulaire($arrayForm, $pageSecure) {
                         foreach($arrayForm[$key][$key_champ]["input"] as $champ_check) {
                             $key_check = array_search ($champ_check, $arrayForm[$key][$key_champ]["input"]);
                             $arrayValueCheck = explode(",", $key_check);
-                            $checked_check = ( $arrayValueCheck[1] != "" ? "checked" : "" );
+                            
+                            if(isset($arrayValueCheck[1]) && $arrayValueCheck[1] != "") {
+                                $checked_check = "checked";
+                            } else {
+                                $checked_check = "";
+                            }
+                            
                             echo '
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="'.$name_check.'[]" id="'.str_replace(",checked", "", $key_check).'" value="'.str_replace(",checked", "", $key_check).'" '.$checked_check.'>
